@@ -1,0 +1,14 @@
+@import "~/assets/scss/color.scss";
+
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
