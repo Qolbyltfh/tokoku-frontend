@@ -1,0 +1,134 @@
+@import "~/assets/scss/color.scss";
+
+nav {
+    float: left;
+    width: 30%;
+    background: $white;
+    padding: 50px;
+    border-right: 1px solid $grey;
+}
+
+nav ul {
+    color: $grey-summer;
+    list-style-type: none;
+    padding: 0;
+}
+
+li a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.grey {
+    font-size: 18px;
+    color: $grey-summer !important;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 7px;
+    margin-left: 26px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+// checkbox
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 12px;
+    width: 12px;
+    background-color: $grey;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: $pink-hover;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: $pink-active;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 3px;
+    top: 1px;
+    width: 3px;
+    height: 6px;
+    border: solid $white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+// radio
+.checkmark-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 14px;
+    width: 14px;
+    background-color: $grey;
+    border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark-radio {
+    background-color: $pink-hover;
+}
+
+.container input:checked ~ .checkmark-radio {
+    background-color: $pink-active;
+}
+
+.checkmark-radio:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark-radio:after {
+    display: block;
+}
+
+.container .checkmark-radio:after {
+    top: 3px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $white;
+}
+
+@media (max-width: 600px) {
+    nav {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid $grey;
+        border-right: none;
+    }
+}
