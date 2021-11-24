@@ -1,5 +1,7 @@
 import api from './api'
 
 export default{
-    getProducts : (context) => api.get(context, 'products'),
+    getProducts() {
+        return api.get('product');
+    }
 }
